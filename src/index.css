@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inder&display=swap");
+
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   background-image: url("../public/assets/background-blue-sky.jpeg");
+  font-family: "Inder";
 }
 
 ul {
