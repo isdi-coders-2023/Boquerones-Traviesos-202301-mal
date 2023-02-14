@@ -1,0 +1,84 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  position: relative;
+  background: rgba(255, 255, 255, 0.35);
+  height: 135px;
+  margin-top: 35%;
+  border-radius: 5%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.img-container {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  margin-bottom: 65%;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.img-container__img {
+  min-height: 100px;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.card__character-title {
+  position: absolute;
+  margin-bottom: 41%;
+  font-size: 0.9rem;
+}
+
+.card__character-films-list,
+.card__character-show-list {
+  display: none;
+}
+
+.button-container {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-bottom: 10%;
+}
+
+.button-container__heart,
+.button-container__plus {
+  display: contents;
+}
+
+@media (min-width: 1440px) {
+  .card-container {
+    height: 200px;
+    width: 22%;
+  }
+
+  .img-container {
+    width: 70%;
+    margin-bottom: 38%;
+    position: absolute;
+  }
+
+  .img-container__img {
+    width: 65%;
+  }
+
+  .card__character-title {
+    position: absolute;
+    margin-bottom: 24%;
+    font-size: 1.6rem;
+  }
+
+  .button-container__heart,
+  .button-container__plus {
+    display: contents;
+    font-size: 1.7rem;
+  }
+
+  .button-container {
+    margin-bottom: 7%;
+  }
+}

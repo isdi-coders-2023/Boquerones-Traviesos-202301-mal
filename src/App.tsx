@@ -1,9 +1,14 @@
 import React from 'react';
 
 import './App.css';
+import DisneyCard from './components/Card/Card';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <DisneyCard />
+    </>
+  );
 }
 
 export default App;
