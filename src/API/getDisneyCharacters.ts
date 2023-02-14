@@ -19,7 +19,6 @@ const getDisneyCharacters = async () => {
     };
     charactersList.push(character);
   }
-  console.log(charactersList);
 };
 
 getDisneyCharacters();
