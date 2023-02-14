@@ -1,13 +1,11 @@
 import Character from '../Store/types/character';
 
-export const charactersList: Character[] = [];
-
-export const getDisneyCharacters = async () => {
+const getDisneyCharacters = async () => {
   const response = await fetch(`https://api.disneyapi.dev/character`);
   const characters = await response.json();
 
   const charactersInfo: [] = characters.data;
-
+  const charactersList: Character[] = [];
   for (let characterObject of charactersInfo) {
     const { _id, name, imageUrl, films, tvShows } = characterObject;
 
@@ -20,6 +18,7 @@ export const getDisneyCharacters = async () => {
     };
     charactersList.push(character);
   }
+  return charactersList;
 };
 
-getDisneyCharacters();
+export default getDisneyCharacters;
