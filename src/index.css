@@ -1,11 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Inder&display=swap");
-
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   background-image: url("../public/assets/background-blue-sky.jpeg");
+  font-family: "Inder", "Times New Roman", Times, serif;
+}
+
+@font-face {
+  font-family: "Inspiration";
+  src: local("Inspiration"),
+    url(/src/assets/fonts/Inspiration-Regular.ttf) format("truetype");
+}
+
+@font-face {
   font-family: "Inder";
+  src: local("Inder"),
+    url(/src/assets/fonts/Inder-Regular.ttf) format("truetype");
 }
 
 ul {
