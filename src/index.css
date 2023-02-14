@@ -18,7 +18,8 @@ body {
     url(/src/assets/fonts/Inder-Regular.ttf) format("truetype");
 }
 
-ul {
+ul,
+li {
   list-style: none;
 }
 
