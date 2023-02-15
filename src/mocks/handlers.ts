@@ -7,7 +7,7 @@ export const handlers = [
       ctx.json({
         data: [
           {
-            id: 908,
+            _id: 908,
             name: 'Cobra Bubbles',
             imageUrl:
               'https://static.wikia.nocookie.net/disney/images/5/55/Cobra_Bubbles_LAS.jpg',
