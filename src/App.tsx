@@ -1,10 +1,18 @@
+import { useEffect } from 'react';
 import './App.css';
-import DisneyCard from './components/Card/Card';
+import CharactersList from './components/CardList/CardList';
+import useGetCharactersList from './components/hooks/useGetCharactersList/useGetCharactersList';
 
 function App() {
+  const { characters, getCharactersList } = useGetCharactersList();
+
+  useEffect(() => {
+    getCharactersList();
+  }, [getCharactersList]);
+
   return (
     <>
-      <DisneyCard />
+      <CharactersList characterList={characters} />
     </>
   );
 }

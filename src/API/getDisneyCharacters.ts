@@ -1,7 +1,7 @@
 import Character from '../Store/types/character';
 
 const getDisneyCharacters = async () => {
-  const response = await fetch(`https://api.disneyapi.dev/character`);
+  const response = await fetch(`https://api.disneyapi.dev/character?films`);
   const characters = await response.json();
 
   const charactersInfo: [] = characters.data;
