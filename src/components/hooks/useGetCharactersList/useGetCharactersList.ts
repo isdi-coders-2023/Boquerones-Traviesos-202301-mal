@@ -8,6 +8,7 @@ const useGetCharactersList = () => {
 
   const getCharactersList = async () => {
     const characterList = await getDisneyCharacters();
+
     const showCharactersAction = {
       type: ActionTypes.SHOW_CHARACTERS,
       payload: characterList,
