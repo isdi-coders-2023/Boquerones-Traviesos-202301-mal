@@ -10,7 +10,7 @@ describe('Given an cardList component', () => {
   test('When rendering the list then it should display a character card', async () => {
     const character = await getDisneyCharacters();
     render(<CharactersList characterList={character} />);
-    const listElement = screen.getByRole('listitem');
+    const listElement = screen.getAllByRole('listitem');
     expect(listElement).toBeInTheDocument();
   });
 });
