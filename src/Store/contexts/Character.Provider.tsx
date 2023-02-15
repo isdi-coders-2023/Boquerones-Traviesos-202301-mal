@@ -3,7 +3,7 @@ import charactersReducer from '../reducer/disneyReducer';
 import CharacterContext from './disneyApp.context';
 
 interface CharacterProviderProps {
-  children: JSX.Element[];
+  children: JSX.Element;
 }
 
 const CharacterProvider: FC<CharacterProviderProps> = ({ children }) => {
