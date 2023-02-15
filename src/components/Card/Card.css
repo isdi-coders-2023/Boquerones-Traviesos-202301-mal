@@ -33,11 +33,6 @@
   font-size: 0.9rem;
 }
 
-.card__character-films-list,
-.card__character-show-list {
-  display: none;
-}
-
 .button-container {
   display: flex;
   width: 80%;
