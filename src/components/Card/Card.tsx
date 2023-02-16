@@ -17,14 +17,16 @@ const DisneyCard: FC<DisneyCardProps> = ({ character }) => {
           alt=""
         ></img>
       </div>
-      <p className="card__character-title">{character.name}</p>
-      <div className="button-container">
-        <button className="button-container__heart">
-          <FontAwesomeIcon icon={regular('heart')} />
-        </button>
-        <button className="button-container__plus">
-          <FontAwesomeIcon icon={solid('plus')} />
-        </button>
+      <div className="info-container">
+        <p className="card__character-title">{character.name}</p>
+        <div className="button-container">
+          <button className="button-container__heart">
+            <FontAwesomeIcon icon={regular('heart')} />
+          </button>
+          <button className="button-container__plus">
+            <FontAwesomeIcon icon={solid('plus')} />
+          </button>
+        </div>
       </div>
     </li>
   );
