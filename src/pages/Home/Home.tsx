@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import CharactersList from '../../components/CardList/CardList';
 import useGetCharactersList from '../../components/hooks/useGetCharactersList/useGetCharactersList';
+import './Home.css';
 
 const Home = () => {
   const { characters, getCharactersList } = useGetCharactersList();
@@ -10,7 +11,7 @@ const Home = () => {
   }, []);
   return (
     <>
-      <h2>Characters</h2>
+      <h2 className="home__title">Characters</h2>
       <CharactersList characterList={characters} />
     </>
   );
