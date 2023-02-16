@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 const MainLayout = () => {
   return (
     <>
-      <header></header>
+      <header className="header">DisneyCloud</header>
       <main>
         <Outlet />
       </main>
