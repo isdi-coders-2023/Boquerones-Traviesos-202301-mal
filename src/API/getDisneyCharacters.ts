@@ -6,6 +6,7 @@ const getDisneyCharacters = async () => {
 
   const charactersInfo: [] = characters.data;
   const charactersList: Character[] = [];
+
   for (let characterObject of charactersInfo) {
     const { _id, name, imageUrl, films, tvShows } = characterObject;
 
@@ -18,7 +19,10 @@ const getDisneyCharacters = async () => {
     };
     charactersList.push(character);
   }
-  return charactersList;
+
+  const smallerCharacters = charactersList.slice(0, 20);
+
+  return smallerCharacters;
 };
 
 export default getDisneyCharacters;
