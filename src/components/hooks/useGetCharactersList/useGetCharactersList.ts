@@ -6,6 +6,7 @@ import { ActionTypes } from '../../../Store/types/Action';
 const useGetCharactersList = () => {
   const { characters, dispatch } = useContext(CharacterContext);
 
+
   const getCharactersList = useCallback(async () => {
     const characterList = await getDisneyCharacters();
 
