@@ -1,18 +1,11 @@
-import { useEffect } from 'react';
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
-import CharactersList from './components/CardList/CardList';
-import useGetCharactersList from './components/hooks/useGetCharactersList/useGetCharactersList';
+import { router } from './router/app-router';
 
 function App() {
-  const { characters, getCharactersList } = useGetCharactersList();
-
-  useEffect(() => {
-    getCharactersList();
-  }, [getCharactersList]);
-
   return (
     <>
-      <CharactersList characterList={characters} />
+      <RouterProvider router={router} />
     </>
   );
 }
