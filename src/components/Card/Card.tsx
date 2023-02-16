@@ -3,6 +3,7 @@ import { solid, regular } from '@fortawesome/fontawesome-svg-core/import.macro';
 import './Card.css';
 import { FC } from 'react';
 import Character from '../../Store/types/character';
+import { Link } from 'react-router-dom';
 
 interface DisneyCardProps {
   character: Character;
@@ -22,9 +23,11 @@ const DisneyCard: FC<DisneyCardProps> = ({ character }) => {
         <button className="button-container__heart">
           <FontAwesomeIcon icon={regular('heart')} />
         </button>
-        <button className="button-container__plus">
-          <FontAwesomeIcon icon={solid('plus')} />
-        </button>
+        <Link to={'/detail'}>
+          <button className="button-container__plus">
+            <FontAwesomeIcon icon={solid('plus')} />
+          </button>
+        </Link>
       </div>
     </li>
   );
