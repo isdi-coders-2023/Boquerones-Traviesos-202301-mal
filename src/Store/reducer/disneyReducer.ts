@@ -7,7 +7,7 @@ const charactersReducer = (
 ): Character[] => {
   switch (action.type) {
     case ActionTypes.SHOW_CHARACTERS:
-      return [...previousDisney, ...action.payload];
+      return [...action.payload];
     default:
       return [...previousDisney];
   }
