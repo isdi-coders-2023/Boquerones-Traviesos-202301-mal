@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     getCharactersList();
-  }, []);
+  }, [getCharactersList]);
   return (
     <>
       <h2 className="home__title">Characters</h2>
