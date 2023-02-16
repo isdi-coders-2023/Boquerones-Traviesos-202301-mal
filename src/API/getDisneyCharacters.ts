@@ -18,7 +18,8 @@ const getDisneyCharacters = async () => {
     };
     charactersList.push(character);
   }
-  return charactersList;
+  const smallerCharacters = charactersList.slice(0, 20);
+  return smallerCharacters;
 };
 
 export default getDisneyCharacters;
