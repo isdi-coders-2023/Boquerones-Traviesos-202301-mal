@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import { link } from 'fs';
+
 import Navigation from './Navigation';
 
 describe('Given a Navigation component', () => {
-  test('When rendered, Then it should show the Navigation Bar', () => {
+  test('When rendered, Then it should show the Navigation Bar with a list', () => {
     render(<Navigation />);
-    const LinkElementList = screen.getAllByRole('link');
-    expect(LinkElementList.length).toEqual(4);
+    const LinkElementList = screen.getAllByRole('listitem');
+    expect(LinkElementList).toHaveLength(8);
   });
 });
