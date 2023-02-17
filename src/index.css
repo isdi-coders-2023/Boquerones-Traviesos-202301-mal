@@ -3,6 +3,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-image: url("../public/assets/background-blue-sky.jpeg");
+  background-size: cover;
   font-family: "Inder", "Times New Roman", Times, serif;
 }
 
