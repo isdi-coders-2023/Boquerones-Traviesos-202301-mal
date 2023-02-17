@@ -44,7 +44,6 @@ body {
 
 .header__logo-mickey {
   height: 40px;
-  height: 40px;
   margin-right: 25px;
   margin-top: 18px;
 }
@@ -68,8 +67,7 @@ body {
 }
 
 .navigation-bar {
-  display: flex;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   width: 60%;
   height: 111px;
   border-radius: 15px;
