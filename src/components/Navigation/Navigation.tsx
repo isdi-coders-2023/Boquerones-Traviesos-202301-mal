@@ -1,5 +1,5 @@
 //import iconSearch from "/assets/search-icon.png"
-
+import { Link } from 'react-router-dom';
 const Navigation = () => {
   return (
     <div className="header-bar">
@@ -34,7 +34,7 @@ const Navigation = () => {
 
           <li className="mobile__nav_bar-list">
             <img width="20px" src="/assets/hart.png" alt="hart icon" />
-            <a href="/favourites">Favourites</a>
+            <Link to={'/favourites'}>Favourites</Link>
           </li>
 
           <li className="mobile__nav_bar-list">
