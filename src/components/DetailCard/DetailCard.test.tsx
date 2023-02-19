@@ -10,7 +10,6 @@ describe('Given a detail card component', () => {
   afterAll(() => server.close());
   test('When rendering the character name and image is displayed', async () => {
     const character = await getDisneyCharaterID('25');
-    console.log(character);
     render(
       <MemoryRouter>
         <DisneyDetailCard character={character.data[0]} />
