@@ -9,6 +9,13 @@ interface DisneyAppContextStructure {
 
 const CharacterContext = createContext<DisneyAppContextStructure>({
   data: {
+    character: {
+      id: 0,
+      name: '',
+      imageUrl: '',
+      films: [],
+      tvShows: [],
+    },
     characters: [],
     favourites: [],
     homeCurrentPage: 1,

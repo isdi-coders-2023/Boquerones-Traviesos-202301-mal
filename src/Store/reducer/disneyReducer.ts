@@ -64,6 +64,12 @@ const charactersReducer = (
             favouritesCurrentPage: favouritesCurrentPage,
             favouritesOffset: favouritesOffset,
           };
+    case ActionTypes.SHOW_CHARACTER_DETAILS:
+      return {
+        ...previousState,
+        characters: [],
+        character: { ...action.payload },
+      };
     default:
       return { ...previousState };
   }

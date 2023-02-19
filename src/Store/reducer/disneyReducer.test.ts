@@ -5,6 +5,13 @@ import charactersReducer from './disneyReducer';
 
 describe('Given the app reducer', () => {
   const mockDefault: DataStructure = {
+    character: {
+      id: 0,
+      name: '',
+      imageUrl: '',
+      films: [],
+      tvShows: [],
+    },
     characters: [],
     favourites: [],
     homeCurrentPage: 5,
@@ -13,6 +20,13 @@ describe('Given the app reducer', () => {
     favouritesOffset: 200,
   };
   const mockMinimumPages: DataStructure = {
+    character: {
+      id: 0,
+      name: '',
+      imageUrl: '',
+      films: [],
+      tvShows: [],
+    },
     characters: [],
     favourites: [],
     homeCurrentPage: 1,
@@ -22,6 +36,13 @@ describe('Given the app reducer', () => {
   };
 
   const mockMaximumPages: DataStructure = {
+    character: {
+      id: 0,
+      name: '',
+      imageUrl: '',
+      films: [],
+      tvShows: [],
+    },
     characters: [],
     favourites: [],
     homeCurrentPage: 34,
@@ -31,27 +52,15 @@ describe('Given the app reducer', () => {
   };
 
   test('When the useReducer function makes no changes, then the state should not change', () => {
-    const previousCharacters: DataStructure = {
-      characters: [],
-      favourites: [],
-      homeCurrentPage: 1,
-      favouritesCurrentPage: 1,
-      homeOffset: 0,
-      favouritesOffset: 0,
-    };
     const updateAction = {
-      type: 'default' as unknown as ActionTypes,
+      type: '',
       payload: [],
     };
-    const updateState = charactersReducer(previousCharacters, updateAction);
-    expect(updateState).toEqual({
-      characters: [],
-      favourites: [],
-      homeCurrentPage: 1,
-      favouritesCurrentPage: 1,
-      homeOffset: 0,
-      favouritesOffset: 0,
-    });
+    const updateState = charactersReducer(
+      mockDefault,
+      updateAction as unknown as DisneyAction
+    );
+    expect(updateState).toEqual(mockDefault);
   });
 
   test('When the user triggers a previous Home page function on the first page, the Home pagination number should stay the same', () => {

@@ -1,6 +1,7 @@
 import Character from './character';
 
 interface DataStructure {
+  character: Character;
   characters: Character[];
   favourites: Character[];
   homeCurrentPage: number;
