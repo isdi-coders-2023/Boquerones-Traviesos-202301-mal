@@ -2,14 +2,25 @@ import DisneyAction, { ActionTypes } from '../types/Action';
 import Character from '../types/character';
 
 const charactersReducer = (
-  previousDisney: Character[],
+  previousDisney: { characters: Character[]; character: Character },
   action: DisneyAction
-): Character[] => {
+): { characters: Character[]; character: Character } => {
   switch (action.type) {
     case ActionTypes.SHOW_CHARACTERS:
-      return [...action.payload];
+      return {
+        characters: [...action.payload],
+        character: { id: 0, name: '', imageUrl: '', films: [], tvShows: [] },
+      };
+    case ActionTypes.SHOW_CHARACTER_DETAILS:
+      return {
+        characters: [],
+        character: { ...action.payload },
+      };
     default:
-      return [...previousDisney];
+      return {
+        characters: [],
+        character: { id: 0, name: '', imageUrl: '', films: [], tvShows: [] },
+      };
   }
 };
 

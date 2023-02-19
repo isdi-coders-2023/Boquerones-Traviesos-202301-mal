@@ -7,7 +7,16 @@ interface CharacterProviderProps {
 }
 
 const CharacterProvider: FC<CharacterProviderProps> = ({ children }) => {
-  const [characters, dispatch] = useReducer(charactersReducer, []);
+  const [characters, dispatch] = useReducer(charactersReducer, {
+    characters: [],
+    character: {
+      id: 0,
+      name: '',
+      imageUrl: '',
+      films: [],
+      tvShows: [],
+    },
+  });
   return (
     <CharacterContext.Provider value={{ characters, dispatch }}>
       {children}
