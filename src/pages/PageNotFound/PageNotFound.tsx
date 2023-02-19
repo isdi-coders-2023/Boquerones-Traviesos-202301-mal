@@ -19,7 +19,7 @@ const PageNotFound = () => {
           <p role={'paragraph'} className="error_title-description">
             Sorry, the page you are looking for could not be found
           </p>
-          <Link to={'/home'}>
+          <Link to={'/'}>
             <button className="button_home">Back to Home</button>
           </Link>
         </div>

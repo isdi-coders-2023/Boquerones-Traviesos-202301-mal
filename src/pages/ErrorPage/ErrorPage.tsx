@@ -17,9 +17,9 @@ const ErrorPage = () => {
           <h2 className="error_title">Oops!</h2>
 
           <p role={'paragraph'} className="error_title-description">
-            Something went wrong.Please try again
+            Something went wrong. Please, try again.
           </p>
-          <Link to={'/home'}>
+          <Link to={'/'}>
             <button className="button_home">Back to Home</button>
           </Link>
         </div>
