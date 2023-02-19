@@ -8,6 +8,13 @@ interface CharacterProviderProps {
 
 const CharacterProvider: FC<CharacterProviderProps> = ({ children }) => {
   const [data, dispatch] = useReducer(charactersReducer, {
+    character: {
+      id: 0,
+      name: '',
+      imageUrl: '',
+      films: [],
+      tvShows: [],
+    },
     characters: [],
     favourites: [],
     homeCurrentPage: 1,

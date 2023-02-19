@@ -25,7 +25,7 @@ const DisneyCard: FC<DisneyCardProps> = ({ character }) => {
           <button className="button-container__heart">
             <FontAwesomeIcon icon={regular('heart')} />
           </button>
-          <Link to={'/detail'}>
+          <Link to={`/detail/${character.id}`}>
             <button className="button-container__plus">
               <FontAwesomeIcon icon={solid('plus')} />
             </button>
