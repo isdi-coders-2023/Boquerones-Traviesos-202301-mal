@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
       <h2 className="home__title">Characters</h2>
-      <CharactersList characterList={characters} />
+      <CharactersList characterList={characters.characters} />
     </>
   );
 };
