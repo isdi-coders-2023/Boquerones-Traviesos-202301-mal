@@ -1,5 +1,5 @@
-//import iconSearch from "/assets/search-icon.png"
 import { Link } from 'react-router-dom';
+import './Navigation.css';
 const Navigation = () => {
   return (
     <div className="header-bar">
