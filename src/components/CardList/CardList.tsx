@@ -10,8 +10,8 @@ interface CharactersListProps {
 const CharactersList: FC<CharactersListProps> = ({ characterList }) => {
   return (
     <ul className="character-list">
-      {characterList.map((character: Character, i) => (
-        <DisneyCard key={i} character={character} />
+      {characterList.map((character: Character) => (
+        <DisneyCard key={character.id} character={character} />
       ))}
     </ul>
   );
