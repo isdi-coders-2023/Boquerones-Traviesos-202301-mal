@@ -1,5 +1,5 @@
-//import iconSearch from "/assets/search-icon.png"
 import { Link } from 'react-router-dom';
+import './Navigation.css';
 const Navigation = () => {
   return (
     <div className="header-bar">
@@ -8,9 +8,11 @@ const Navigation = () => {
         <img src="/assets/mickey-menu.png" alt="mickey menu logo" />
       </label>
 
-      <div className="header__logo-container" id="header__logo-container">
-        <img src="/assets/disney-icon.png" alt="disney cloud logo" />
-      </div>
+      <Link to={'/'}>
+        <div className="header__logo-container" id="header__logo-container">
+          <img src="/assets/disney-icon.png" alt="disney cloud logo" />
+        </div>
+      </Link>
 
       <div className="mobile-search">
         <a className="mobile-search-icon" href="/search-character">
