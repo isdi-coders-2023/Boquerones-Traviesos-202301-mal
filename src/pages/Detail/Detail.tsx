@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import useGetCharactersList from '../../components/hooks/useGetCharactersList/useGetCharactersList';
 
 const Detail = () => {
-  const { characters, getCharacterDetail } = useGetCharactersList();
+  const { data, getCharacterDetail } = useGetCharactersList();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const Detail = () => {
         /* {loading ? (
         <p>CARGANDO...</p>
       ) : ( */
-        <DisneyDetailCard character={characters.character} />
+        <DisneyDetailCard character={data.character} />
       }
     </>
   );
