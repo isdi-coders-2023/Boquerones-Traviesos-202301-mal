@@ -1,0 +1,183 @@
+body {
+  background-size: cover;
+}
+
+.mobile__nav_bar {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+
+  justify-content: center;
+}
+
+.mobile__nav_bar-list {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: center;
+}
+
+.mobile-nav {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.25);
+  display: none;
+}
+
+.header-bar {
+  height: 83px;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.header-bar input {
+  display: none;
+}
+
+.header__logo-container {
+  margin: 20px;
+}
+.header__logo-container img {
+  width: 100px;
+}
+
+.header__logo-mickey {
+  height: 40px;
+  margin-right: 25px;
+  margin-top: 18px;
+}
+
+.mobile-search {
+  width: 100%;
+  padding-top: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  display: none;
+}
+
+.mobile-search-ico {
+  padding-top: 20px;
+}
+
+.mobile-search-input {
+  padding-top: 20px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+}
+
+.navigation-bar {
+  /* justify-content: flex-end; */
+  width: 60%;
+  height: 111px;
+  border-radius: 15px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.25);
+  display: none;
+}
+
+.a {
+  border-bottom: 1px solid black;
+}
+
+.navigation-input {
+  font-size: 16px;
+  border: none;
+
+  background-color: transparent;
+}
+
+.navigation-list__favourites {
+  font-size: 32px;
+}
+.navigation-list__parks {
+  font-size: 32px;
+}
+.navigation-bar-list {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (min-width: 1000px) {
+  .header__logo-disney {
+    display: block;
+  }
+
+  .mobile-search {
+    visibility: hidden;
+  }
+
+  .navigation-bar {
+    display: block;
+    width: 70%;
+    margin-right: 2rem;
+    margin-top: 1rem;
+  }
+  .header__logo-container {
+    margin: 3rem;
+    display: block;
+  }
+
+  #header__logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .header__logo-container img {
+    width: 150px;
+  }
+
+  .header__logo-mickey {
+    display: none;
+  }
+
+  .header-bar input:checked ~ .mobile-nav {
+    display: none;
+    margin-right: 20px;
+    border-radius: 0 0 15px 0;
+    top: -20rem;
+    width: 2rem;
+  }
+
+  .header-bar {
+    display: flex;
+    height: 144px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  body {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .header-bar input:checked ~ .header__logo-container {
+    display: block;
+  }
+}
+
+/* .header-bar input:checked ~ .header__logo-mickey {
+  display: none;
+} */
+
+.header-bar input:checked ~ .header__logo-container {
+  display: block;
+  position: absolute;
+  top: -20rem;
+  width: 2rem;
+}
+
+.header-bar input:checked ~ .mobile-nav {
+  display: block;
+  position: relative;
+  margin-right: 20px;
+  border-radius: 0 0 15px 0;
+}

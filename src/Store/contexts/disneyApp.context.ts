@@ -1,15 +1,14 @@
 import { createContext, Dispatch } from 'react';
 import DisneyAction from '../types/Action';
-import Character from '../types/character';
+import DataStructure from '../types/data';
 
 interface DisneyAppContextStructure {
-  characters: { characters: Character[]; character: Character };
+  data: DataStructure;
   dispatch: Dispatch<DisneyAction>;
 }
 
 const CharacterContext = createContext<DisneyAppContextStructure>({
-  characters: {
-    characters: [],
+  data: {
     character: {
       id: 0,
       name: '',
@@ -17,6 +16,12 @@ const CharacterContext = createContext<DisneyAppContextStructure>({
       films: [],
       tvShows: [],
     },
+    characters: [],
+    favourites: [],
+    homeCurrentPage: 1,
+    favouritesCurrentPage: 1,
+    homeOffset: 0,
+    favouritesOffset: 0,
   },
   dispatch: () => {},
 });

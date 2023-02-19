@@ -7,8 +7,7 @@ interface CharacterProviderProps {
 }
 
 const CharacterProvider: FC<CharacterProviderProps> = ({ children }) => {
-  const [characters, dispatch] = useReducer(charactersReducer, {
-    characters: [],
+  const [data, dispatch] = useReducer(charactersReducer, {
     character: {
       id: 0,
       name: '',
@@ -16,9 +15,15 @@ const CharacterProvider: FC<CharacterProviderProps> = ({ children }) => {
       films: [],
       tvShows: [],
     },
+    characters: [],
+    favourites: [],
+    homeCurrentPage: 1,
+    favouritesCurrentPage: 1,
+    homeOffset: 0,
+    favouritesOffset: 0,
   });
   return (
-    <CharacterContext.Provider value={{ characters, dispatch }}>
+    <CharacterContext.Provider value={{ data, dispatch }}>
       {children}
     </CharacterContext.Provider>
   );
