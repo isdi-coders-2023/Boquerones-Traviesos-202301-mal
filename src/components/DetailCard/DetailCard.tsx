@@ -20,9 +20,8 @@ const DisneyDetailCard: FC<DetailCardProps> = ({ character }) => {
             <FontAwesomeIcon icon={solid('arrow-left')} />
           </button>
         </Link>
-        <h3 className="detail__title">{character.name}</h3>
       </div>
-
+      <h3 className="detail__title">{character.name}</h3>
       <img alt="" className="detail__img" src={character.imageUrl} />
       <div className="films__container">
         <p className="detail__title-films">Films:</p>
