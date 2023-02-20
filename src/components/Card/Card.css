@@ -58,11 +58,12 @@
   .card-container {
     width: 25%;
     height: 160px;
+    margin-top: 10%;
   }
 
   .img-container {
     width: 70%;
-    margin-bottom: 35%;
+    margin-bottom: 29%;
     position: absolute;
     max-height: 125px;
   }
