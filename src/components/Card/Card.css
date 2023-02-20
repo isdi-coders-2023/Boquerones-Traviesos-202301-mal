@@ -29,10 +29,10 @@
 
 .info-container {
   display: flex;
-  align-items: center;
   width: 100%;
-  flex-direction: column;
+  text-align: center;
   justify-content: center;
+  align-items: center;
 }
 
 .card__character-title {
@@ -56,16 +56,15 @@
 
 @media (min-width: 1440px) {
   .card-container {
-    height: 200px;
-    width: 22%;
-    margin-top: 10%;
+    width: 25%;
+    height: 160px;
   }
 
   .img-container {
     width: 70%;
-    margin-bottom: 40%;
+    margin-bottom: 35%;
     position: absolute;
-    max-height: 150px;
+    max-height: 125px;
   }
 
   .img-container__img {
@@ -73,10 +72,8 @@
   }
 
   .card__character-title {
-    position: absolute;
-    margin-bottom: 40%;
     font-size: 1.5rem;
-    margin-top: 0;
+    margin-bottom: 35%;
   }
 
   .button-container__heart,
